@@ -30,19 +30,23 @@ html,body{
   width:100vw;
   font-family: $fontE,$fontJ;
 }
-
+*{
+  box-sizing:border-box;
+}
 header{
-  // position: fixed; fixしたいけどボタン が押せなくなる
-  width:100%;
+  position: fixed; 
+  width:30%;
   height:20%;
   top:0;
-  // z-index: -5;
-  @mixin triangle($z,$top,$left){
+  right:0;
+  z-index: 100;
+  @mixin triangle($z,$top,$right){
     position: absolute;
-    width:10%;
+    width:calc(100% / 3);
     z-index: $z;
     top:$top;
-    right:$left;
+    right:$right;
+    transition: all .4s;
   }
   .yellow{
     @include triangle(20,6vh,3.5vw);
@@ -56,7 +60,6 @@ header{
     box-sizing: border-box;
   }
   .menu-trigger {
-    // position: relative;
     width: 30px;
     height: 23px;
     position: absolute;
@@ -84,7 +87,7 @@ header{
   nav{
     ul{
       list-style: none;
-      margin-top: 2%;
+      margin-top: 4%;
       .li{
         opacity: 0;
         line-height: 20px;
@@ -94,22 +97,23 @@ header{
         @mixin child($left,$deg){
           width:100px;
           height:20px;
-          margin-top:1.5vh;
+          margin-top:1.7vh;
           margin-left: $left;
           transform: rotate($deg);
+          transition: all .4s;
           // display: none;
         }
         &:nth-child(1){
-          @include child(77%,14deg);
+          @include child(20%,14deg);
         }
         &:nth-child(2){
-          @include child(76%,5deg);
+          @include child(16%,5deg);
         }	
         &:nth-child(3){ 
-          @include child(76%,-5deg);
+          @include child(16%,-5deg);
         }	
         &:nth-child(4){
-          @include child(77%,-14deg);
+          @include child(20%,-14deg);
         }
         a{
           text-decoration: none;
@@ -123,17 +127,15 @@ header{
   }
 
   // メニューバーを押した時
-  @mixin active($top,$left){
-    transform: rotate(180deg);
+  @mixin active($top,$right,$deg){
+    transform: rotate($deg) translateY($top) translateX($right);
     transition-duration: .4s;
-    top:$top;
-    right:$left;
   }
   .yellow.active{
-    @include active(6vh,4.5vw);
+    @include active(0vh,1vw,180deg);
   }
   .purple.active{
-    @include active(5vh,3.5vw);
+    @include active(-.5vh,-1vw,180deg);
   }
   .menu-trigger.active span:nth-of-type(1) {
     -webkit-transform: translateY(10px) rotate(-45deg);

@@ -12,22 +12,35 @@ html, body {
   width: 100vw;
   font-family: "Phenomena-Regular", sans-serif, "TsukuARdGothic-Regular", sans-serif; }
 
+* {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box; }
+
 header {
-  width: 100%;
+  position: fixed;
+  width: 30%;
   height: 20%;
-  top: 0; }
+  top: 0;
+  right: 0;
+  z-index: 100; }
   header .yellow {
     position: absolute;
-    width: 10%;
+    width: calc(100% / 3);
     z-index: 20;
     top: 6vh;
-    right: 3.5vw; }
+    right: 3.5vw;
+    -webkit-transition: all .4s;
+    -o-transition: all .4s;
+    transition: all .4s; }
   header .purple {
     position: absolute;
-    width: 10%;
+    width: calc(100% / 3);
     z-index: 15;
     top: 4.5vh;
-    right: 4.5vw; }
+    right: 4.5vw;
+    -webkit-transition: all .4s;
+    -o-transition: all .4s;
+    transition: all .4s; }
   header .menu-trigger, header .menu-trigger span {
     display: inline-block;
     -webkit-transition: all .4s;
@@ -57,7 +70,7 @@ header {
     bottom: 0; }
   header nav ul {
     list-style: none;
-    margin-top: 2%; }
+    margin-top: 4%; }
     header nav ul .li {
       opacity: 0;
       line-height: 20px;
@@ -67,58 +80,66 @@ header {
       header nav ul .li:nth-child(1) {
         width: 100px;
         height: 20px;
-        margin-top: 1.5vh;
-        margin-left: 77%;
+        margin-top: 1.7vh;
+        margin-left: 20%;
         -webkit-transform: rotate(14deg);
         -ms-transform: rotate(14deg);
-        transform: rotate(14deg); }
+        transform: rotate(14deg);
+        -webkit-transition: all .4s;
+        -o-transition: all .4s;
+        transition: all .4s; }
       header nav ul .li:nth-child(2) {
         width: 100px;
         height: 20px;
-        margin-top: 1.5vh;
-        margin-left: 76%;
+        margin-top: 1.7vh;
+        margin-left: 16%;
         -webkit-transform: rotate(5deg);
         -ms-transform: rotate(5deg);
-        transform: rotate(5deg); }
+        transform: rotate(5deg);
+        -webkit-transition: all .4s;
+        -o-transition: all .4s;
+        transition: all .4s; }
       header nav ul .li:nth-child(3) {
         width: 100px;
         height: 20px;
-        margin-top: 1.5vh;
-        margin-left: 76%;
+        margin-top: 1.7vh;
+        margin-left: 16%;
         -webkit-transform: rotate(-5deg);
         -ms-transform: rotate(-5deg);
-        transform: rotate(-5deg); }
+        transform: rotate(-5deg);
+        -webkit-transition: all .4s;
+        -o-transition: all .4s;
+        transition: all .4s; }
       header nav ul .li:nth-child(4) {
         width: 100px;
         height: 20px;
-        margin-top: 1.5vh;
-        margin-left: 77%;
+        margin-top: 1.7vh;
+        margin-left: 20%;
         -webkit-transform: rotate(-14deg);
         -ms-transform: rotate(-14deg);
-        transform: rotate(-14deg); }
+        transform: rotate(-14deg);
+        -webkit-transition: all .4s;
+        -o-transition: all .4s;
+        transition: all .4s; }
       header nav ul .li a {
         text-decoration: none; }
         header nav ul .li a span {
           color: #666666;
           letter-spacing: 5px; }
   header .yellow.active {
-    -webkit-transform: rotate(180deg);
-    -ms-transform: rotate(180deg);
-    transform: rotate(180deg);
+    -webkit-transform: rotate(180deg) translateY(0vh) translateX(1vw);
+    -ms-transform: rotate(180deg) translateY(0vh) translateX(1vw);
+    transform: rotate(180deg) translateY(0vh) translateX(1vw);
     -webkit-transition-duration: .4s;
     -o-transition-duration: .4s;
-    transition-duration: .4s;
-    top: 6vh;
-    right: 4.5vw; }
+    transition-duration: .4s; }
   header .purple.active {
-    -webkit-transform: rotate(180deg);
-    -ms-transform: rotate(180deg);
-    transform: rotate(180deg);
+    -webkit-transform: rotate(180deg) translateY(-0.5vh) translateX(-1vw);
+    -ms-transform: rotate(180deg) translateY(-0.5vh) translateX(-1vw);
+    transform: rotate(180deg) translateY(-0.5vh) translateX(-1vw);
     -webkit-transition-duration: .4s;
     -o-transition-duration: .4s;
-    transition-duration: .4s;
-    top: 5vh;
-    right: 3.5vw; }
+    transition-duration: .4s; }
   header .menu-trigger.active span:nth-of-type(1) {
     -webkit-transform: translateY(10px) rotate(-45deg);
     -ms-transform: translateY(10px) rotate(-45deg);
