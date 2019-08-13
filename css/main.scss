@@ -10,9 +10,18 @@
 $fontJ : "TsukuARdGothic-Regular",sans-serif;
 $fontE : "Phenomena-Regular",sans-serif;
 
-@mixin parent{
-  height:100vh;
+//color
+$gray:#313131;
+$purple:#e8dbf7;
+$green:#a7f4d3;
+$yellow:#fefd68;
+$pink:#fdddec;
+$blue:#b7e3fc;
+
+@mixin parent($height){
+  height:$height;
   position: relative;
+  z-index:10;
 }
 @mixin subtitle {
   font-weight: normal;
@@ -23,6 +32,7 @@ $fontE : "Phenomena-Regular",sans-serif;
   padding: 3% 0;
   height:30px;
   line-height: 30px;
+  color:$gray;
 }
 
 html,body{
@@ -42,17 +52,17 @@ header{
   z-index: 100;
   @mixin triangle($z,$top,$right){
     position: absolute;
-    width:calc(100% / 3);
+    width:140px;
     z-index: $z;
     top:$top;
     right:$right;
     transition: all .4s;
   }
   .yellow{
-    @include triangle(20,6vh,3.5vw);
+    @include triangle(20,6vh,48px);
   }
   .purple{
-    @include triangle(15,4.5vh,4.5vw);
+    @include triangle(15,4.5vh,65px);
   }
   .menu-trigger,.menu-trigger span {
     display: inline-block;
@@ -101,19 +111,18 @@ header{
           margin-left: $left;
           transform: rotate($deg);
           transition: all .4s;
-          // display: none;
         }
         &:nth-child(1){
-          @include child(20%,14deg);
+          @include child(75px,14deg);
         }
         &:nth-child(2){
-          @include child(16%,5deg);
+          @include child(60px,5deg);
         }	
         &:nth-child(3){ 
-          @include child(16%,-5deg);
+          @include child(60px,-5deg);
         }	
         &:nth-child(4){
-          @include child(20%,-14deg);
+          @include child(75px,-14deg);
         }
         a{
           text-decoration: none;
@@ -132,10 +141,10 @@ header{
     transition-duration: .4s;
   }
   .yellow.active{
-    @include active(0vh,1vw,180deg);
+    @include active(0vh,12px,180deg);
   }
   .purple.active{
-    @include active(-.5vh,-1vw,180deg);
+    @include active(-.5vh,-12px,180deg);
   }
   .menu-trigger.active span:nth-of-type(1) {
     -webkit-transform: translateY(10px) rotate(-45deg);
@@ -193,11 +202,11 @@ header{
 }
 
 main{
-  z-index: 5;
+  z-index: -1;
 }
 
-.top{
-  @include parent;
+#top{
+  @include parent(100vh);
   div{
     width:auto;
     height:auto;
@@ -225,14 +234,15 @@ main{
   }
 }
 
-.profile{
-  @include parent;
+#profile{
+  @include parent(100vh);
   h2{
     @include subtitle;
   }
   .profileBox{
     display: flex;
     height:calc(94% - 30px);
+    transform: translateY(calc(-30px - 3%));
     .proImgBox{
       display: flex;
       flex-direction: column;
@@ -249,11 +259,11 @@ main{
       }
     }
     .details{
-      // display: flex;
-      // flex-direction: column;
-      // justify-content: center;
-      // align-items: center;
-      width:59%;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      width:60%;
       height:100%;
       text-align: center;
       vertical-align: middle;
@@ -263,6 +273,132 @@ main{
       table{
         font-family: $fontJ;
       }
+    }
+  }
+}
+
+#work{
+  @include parent(auto);
+  h2{
+    @include subtitle;
+  }
+  article{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    padding:0 30px;
+    div{
+      width:600px;
+      margin:10px;
+      
+      img{
+        width:100%;
+      }
+    }
+  }
+}
+
+#skill{
+  @include parent(auto);
+  h2{
+    @include subtitle;
+  }
+  @mixin skills($line,$color){
+    padding:100px 0;
+    height:8vw;
+    .skillName{
+      span{
+        margin: 30px 0;
+        width:10vw;
+        height:10vw;
+        background-color: $color;
+        display: table-cell;
+        border-radius: 50%;
+        text-align: center;
+        font-family: $fontE;
+        font-size: 20px;
+        letter-spacing: 4px;
+        font-weight: bold;
+        color:$gray;
+        vertical-align: middle;
+        padding-top: 20px auto;
+      }
+    }
+    .skillBox{
+      padding: 30px 0 30px 30px;
+      width: auto;
+      img{
+        width:4vw;
+      }
+    }
+  }
+  table{
+    width:100%;
+    padding:0 250px;
+    .html{
+      // 11 - imgの個数
+      @include skills(1,$yellow);
+    }
+    .js{
+      @include skills(4,$green);
+    }
+    .jQuery{
+      @include skills(1,$purple);
+    }
+    .java{
+      @include skills(7,$pink);
+    }
+    .rails{
+      @include skills(8,$yellow);
+    }
+    .design{
+      @include skills(7,$blue);
+    }
+  }
+}
+
+#contact{
+  @include parent(100vh);
+  h2{
+    @include subtitle;
+  }
+  div{
+    width:auto;
+    height:auto;
+    position: absolute;
+    top: 50%;
+    right: 0px;
+    left: 0px;
+    background-color: #f2f2f2;
+    transform: translateY(-50%) skewY(-3deg) ;
+    z-index: -5;
+    @mixin contact($font,$size){
+      text-align: center;
+      font-family:$font;
+      transform: skewY(3deg);
+      font-size: $size;
+      color:$gray;
+    }
+    .contactJ{
+      @include contact($fontJ,20px);
+      margin-top:4%;
+    }
+    a{
+      text-decoration: none;
+      .contactE{
+        @include contact($fontE,20px);
+        letter-spacing: 2px;
+        margin-bottom:4%;
+        img{
+          height:20px;
+          margin:0 20px;
+        }
+        &:hover{
+          font-size: 21px;
+          transition-duration: .5s;
+        }
+      }
+      
     }
   }
 }

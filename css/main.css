@@ -25,19 +25,19 @@ header {
   z-index: 100; }
   header .yellow {
     position: absolute;
-    width: calc(100% / 3);
+    width: 140px;
     z-index: 20;
     top: 6vh;
-    right: 3.5vw;
+    right: 48px;
     -webkit-transition: all .4s;
     -o-transition: all .4s;
     transition: all .4s; }
   header .purple {
     position: absolute;
-    width: calc(100% / 3);
+    width: 140px;
     z-index: 15;
     top: 4.5vh;
-    right: 4.5vw;
+    right: 65px;
     -webkit-transition: all .4s;
     -o-transition: all .4s;
     transition: all .4s; }
@@ -81,7 +81,7 @@ header {
         width: 100px;
         height: 20px;
         margin-top: 1.7vh;
-        margin-left: 20%;
+        margin-left: 75px;
         -webkit-transform: rotate(14deg);
         -ms-transform: rotate(14deg);
         transform: rotate(14deg);
@@ -92,7 +92,7 @@ header {
         width: 100px;
         height: 20px;
         margin-top: 1.7vh;
-        margin-left: 16%;
+        margin-left: 60px;
         -webkit-transform: rotate(5deg);
         -ms-transform: rotate(5deg);
         transform: rotate(5deg);
@@ -103,7 +103,7 @@ header {
         width: 100px;
         height: 20px;
         margin-top: 1.7vh;
-        margin-left: 16%;
+        margin-left: 60px;
         -webkit-transform: rotate(-5deg);
         -ms-transform: rotate(-5deg);
         transform: rotate(-5deg);
@@ -114,7 +114,7 @@ header {
         width: 100px;
         height: 20px;
         margin-top: 1.7vh;
-        margin-left: 20%;
+        margin-left: 75px;
         -webkit-transform: rotate(-14deg);
         -ms-transform: rotate(-14deg);
         transform: rotate(-14deg);
@@ -127,16 +127,16 @@ header {
           color: #666666;
           letter-spacing: 5px; }
   header .yellow.active {
-    -webkit-transform: rotate(180deg) translateY(0vh) translateX(1vw);
-    -ms-transform: rotate(180deg) translateY(0vh) translateX(1vw);
-    transform: rotate(180deg) translateY(0vh) translateX(1vw);
+    -webkit-transform: rotate(180deg) translateY(0vh) translateX(12px);
+    -ms-transform: rotate(180deg) translateY(0vh) translateX(12px);
+    transform: rotate(180deg) translateY(0vh) translateX(12px);
     -webkit-transition-duration: .4s;
     -o-transition-duration: .4s;
     transition-duration: .4s; }
   header .purple.active {
-    -webkit-transform: rotate(180deg) translateY(-0.5vh) translateX(-1vw);
-    -ms-transform: rotate(180deg) translateY(-0.5vh) translateX(-1vw);
-    transform: rotate(180deg) translateY(-0.5vh) translateX(-1vw);
+    -webkit-transform: rotate(180deg) translateY(-0.5vh) translateX(-12px);
+    -ms-transform: rotate(180deg) translateY(-0.5vh) translateX(-12px);
+    transform: rotate(180deg) translateY(-0.5vh) translateX(-12px);
     -webkit-transition-duration: .4s;
     -o-transition-duration: .4s;
     transition-duration: .4s; }
@@ -187,12 +187,13 @@ header {
     animation: childAnimation .4s; }
 
 main {
-  z-index: 5; }
+  z-index: -1; }
 
-.top {
+#top {
   height: 100vh;
-  position: relative; }
-  .top div {
+  position: relative;
+  z-index: 10; }
+  #top div {
     width: auto;
     height: auto;
     position: absolute;
@@ -204,7 +205,7 @@ main {
     -ms-transform: translateY(-50%) skewY(3deg);
     transform: translateY(-50%) skewY(3deg);
     z-index: -5; }
-    .top div .name {
+    #top div .name {
       font-size: 80px;
       letter-spacing: 20px;
       display: inline-block;
@@ -212,7 +213,7 @@ main {
       -webkit-transform: skewY(-3deg);
       -ms-transform: skewY(-3deg);
       transform: skewY(-3deg); }
-    .top div .site {
+    #top div .site {
       font-size: 40px;
       letter-spacing: 15px;
       text-align: center;
@@ -221,10 +222,11 @@ main {
       -ms-transform: skewY(-3deg);
       transform: skewY(-3deg); }
 
-.profile {
+#profile {
   height: 100vh;
-  position: relative; }
-  .profile h2 {
+  position: relative;
+  z-index: 10; }
+  #profile h2 {
     font-weight: normal;
     text-align: center;
     font-size: 30px;
@@ -232,13 +234,17 @@ main {
     margin: 0 auto;
     padding: 3% 0;
     height: 30px;
-    line-height: 30px; }
-  .profile .profileBox {
+    line-height: 30px;
+    color: #313131; }
+  #profile .profileBox {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-    height: calc(94% - 30px); }
-    .profile .profileBox .proImgBox {
+    height: calc(94% - 30px);
+    -webkit-transform: translateY(calc(-30px - 3%));
+    -ms-transform: translateY(calc(-30px - 3%));
+    transform: translateY(calc(-30px - 3%)); }
+    #profile .profileBox .proImgBox {
       display: -webkit-box;
       display: -ms-flexbox;
       display: flex;
@@ -254,18 +260,272 @@ main {
       align-items: center;
       width: 40%;
       height: 100%; }
-      .profile .profileBox .proImgBox img {
+      #profile .profileBox .proImgBox img {
         width: 25vw;
         height: 25vw;
         border-radius: 50%;
         -o-object-fit: cover;
         object-fit: cover; }
-    .profile .profileBox .details {
-      width: 59%;
+    #profile .profileBox .details {
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-orient: vertical;
+      -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+      flex-direction: column;
+      -webkit-box-pack: center;
+      -ms-flex-pack: center;
+      justify-content: center;
+      -webkit-box-align: center;
+      -ms-flex-align: center;
+      align-items: center;
+      width: 60%;
       height: 100%;
       text-align: center;
       vertical-align: middle; }
-      .profile .profileBox .details p {
+      #profile .profileBox .details p {
         font-family: "TsukuARdGothic-Regular", sans-serif; }
-      .profile .profileBox .details table {
+      #profile .profileBox .details table {
         font-family: "TsukuARdGothic-Regular", sans-serif; }
+
+#work {
+  height: auto;
+  position: relative;
+  z-index: 10; }
+  #work h2 {
+    font-weight: normal;
+    text-align: center;
+    font-size: 30px;
+    letter-spacing: 10px;
+    margin: 0 auto;
+    padding: 3% 0;
+    height: 30px;
+    line-height: 30px;
+    color: #313131; }
+  #work article {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    -ms-flex-pack: distribute;
+    justify-content: space-around;
+    padding: 0 30px; }
+    #work article div {
+      width: 600px;
+      margin: 10px; }
+      #work article div img {
+        width: 100%; }
+
+#skill {
+  height: auto;
+  position: relative;
+  z-index: 10; }
+  #skill h2 {
+    font-weight: normal;
+    text-align: center;
+    font-size: 30px;
+    letter-spacing: 10px;
+    margin: 0 auto;
+    padding: 3% 0;
+    height: 30px;
+    line-height: 30px;
+    color: #313131; }
+  #skill table {
+    width: 100%;
+    padding: 0 250px; }
+    #skill table .html {
+      padding: 100px 0;
+      height: 8vw; }
+      #skill table .html .skillName span {
+        margin: 30px 0;
+        width: 10vw;
+        height: 10vw;
+        background-color: #fefd68;
+        display: table-cell;
+        border-radius: 50%;
+        text-align: center;
+        font-family: "Phenomena-Regular", sans-serif;
+        font-size: 20px;
+        letter-spacing: 4px;
+        font-weight: bold;
+        color: #313131;
+        vertical-align: middle;
+        padding-top: 20px auto; }
+      #skill table .html .skillBox {
+        padding: 30px 0 30px 30px;
+        width: auto; }
+        #skill table .html .skillBox img {
+          width: 4vw; }
+    #skill table .js {
+      padding: 100px 0;
+      height: 8vw; }
+      #skill table .js .skillName span {
+        margin: 30px 0;
+        width: 10vw;
+        height: 10vw;
+        background-color: #a7f4d3;
+        display: table-cell;
+        border-radius: 50%;
+        text-align: center;
+        font-family: "Phenomena-Regular", sans-serif;
+        font-size: 20px;
+        letter-spacing: 4px;
+        font-weight: bold;
+        color: #313131;
+        vertical-align: middle;
+        padding-top: 20px auto; }
+      #skill table .js .skillBox {
+        padding: 30px 0 30px 30px;
+        width: auto; }
+        #skill table .js .skillBox img {
+          width: 4vw; }
+    #skill table .jQuery {
+      padding: 100px 0;
+      height: 8vw; }
+      #skill table .jQuery .skillName span {
+        margin: 30px 0;
+        width: 10vw;
+        height: 10vw;
+        background-color: #e8dbf7;
+        display: table-cell;
+        border-radius: 50%;
+        text-align: center;
+        font-family: "Phenomena-Regular", sans-serif;
+        font-size: 20px;
+        letter-spacing: 4px;
+        font-weight: bold;
+        color: #313131;
+        vertical-align: middle;
+        padding-top: 20px auto; }
+      #skill table .jQuery .skillBox {
+        padding: 30px 0 30px 30px;
+        width: auto; }
+        #skill table .jQuery .skillBox img {
+          width: 4vw; }
+    #skill table .java {
+      padding: 100px 0;
+      height: 8vw; }
+      #skill table .java .skillName span {
+        margin: 30px 0;
+        width: 10vw;
+        height: 10vw;
+        background-color: #fdddec;
+        display: table-cell;
+        border-radius: 50%;
+        text-align: center;
+        font-family: "Phenomena-Regular", sans-serif;
+        font-size: 20px;
+        letter-spacing: 4px;
+        font-weight: bold;
+        color: #313131;
+        vertical-align: middle;
+        padding-top: 20px auto; }
+      #skill table .java .skillBox {
+        padding: 30px 0 30px 30px;
+        width: auto; }
+        #skill table .java .skillBox img {
+          width: 4vw; }
+    #skill table .rails {
+      padding: 100px 0;
+      height: 8vw; }
+      #skill table .rails .skillName span {
+        margin: 30px 0;
+        width: 10vw;
+        height: 10vw;
+        background-color: #fefd68;
+        display: table-cell;
+        border-radius: 50%;
+        text-align: center;
+        font-family: "Phenomena-Regular", sans-serif;
+        font-size: 20px;
+        letter-spacing: 4px;
+        font-weight: bold;
+        color: #313131;
+        vertical-align: middle;
+        padding-top: 20px auto; }
+      #skill table .rails .skillBox {
+        padding: 30px 0 30px 30px;
+        width: auto; }
+        #skill table .rails .skillBox img {
+          width: 4vw; }
+    #skill table .design {
+      padding: 100px 0;
+      height: 8vw; }
+      #skill table .design .skillName span {
+        margin: 30px 0;
+        width: 10vw;
+        height: 10vw;
+        background-color: #b7e3fc;
+        display: table-cell;
+        border-radius: 50%;
+        text-align: center;
+        font-family: "Phenomena-Regular", sans-serif;
+        font-size: 20px;
+        letter-spacing: 4px;
+        font-weight: bold;
+        color: #313131;
+        vertical-align: middle;
+        padding-top: 20px auto; }
+      #skill table .design .skillBox {
+        padding: 30px 0 30px 30px;
+        width: auto; }
+        #skill table .design .skillBox img {
+          width: 4vw; }
+
+#contact {
+  height: 100vh;
+  position: relative;
+  z-index: 10; }
+  #contact h2 {
+    font-weight: normal;
+    text-align: center;
+    font-size: 30px;
+    letter-spacing: 10px;
+    margin: 0 auto;
+    padding: 3% 0;
+    height: 30px;
+    line-height: 30px;
+    color: #313131; }
+  #contact div {
+    width: auto;
+    height: auto;
+    position: absolute;
+    top: 50%;
+    right: 0px;
+    left: 0px;
+    background-color: #f2f2f2;
+    -webkit-transform: translateY(-50%) skewY(-3deg);
+    -ms-transform: translateY(-50%) skewY(-3deg);
+    transform: translateY(-50%) skewY(-3deg);
+    z-index: -5; }
+    #contact div .contactJ {
+      text-align: center;
+      font-family: "TsukuARdGothic-Regular", sans-serif;
+      -webkit-transform: skewY(3deg);
+      -ms-transform: skewY(3deg);
+      transform: skewY(3deg);
+      font-size: 20px;
+      color: #313131;
+      margin-top: 4%; }
+    #contact div a {
+      text-decoration: none; }
+      #contact div a .contactE {
+        text-align: center;
+        font-family: "Phenomena-Regular", sans-serif;
+        -webkit-transform: skewY(3deg);
+        -ms-transform: skewY(3deg);
+        transform: skewY(3deg);
+        font-size: 20px;
+        color: #313131;
+        letter-spacing: 2px;
+        margin-bottom: 4%; }
+        #contact div a .contactE img {
+          height: 20px;
+          margin: 0 20px; }
+        #contact div a .contactE:hover {
+          font-size: 21px;
+          -webkit-transition-duration: .5s;
+          -o-transition-duration: .5s;
+          transition-duration: .5s; }
