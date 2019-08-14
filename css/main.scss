@@ -243,12 +243,13 @@ main{
     display: flex;
     height:calc(94% - 30px);
     transform: translateY(calc(-30px - 3%));
+    margin:0 150px;
     .proImgBox{
       display: flex;
       flex-direction: column;
       justify-content: center;
       align-items: center;
-      width:40%;
+      width:50%;
       height:100%;
       
       img{
@@ -263,7 +264,7 @@ main{
       flex-direction: column;
       justify-content: center;
       align-items: center;
-      width:60%;
+      width:50%;
       height:100%;
       text-align: center;
       vertical-align: middle;
@@ -287,9 +288,9 @@ main{
     flex-wrap: wrap;
     justify-content: space-around;
     padding:0 30px;
-    div{
+    a{
       width:600px;
-      margin:10px;
+      margin:30px 10px;
       
       img{
         width:100%;
@@ -303,14 +304,14 @@ main{
   h2{
     @include subtitle;
   }
-  @mixin skills($line,$color){
-    padding:100px 0;
+  @mixin skills($color){
     height:8vw;
     .skillName{
+      padding:10px 0;
       span{
         margin: 30px 0;
-        width:10vw;
-        height:10vw;
+        width:8vw;
+        height:8vw;
         background-color: $color;
         display: table-cell;
         border-radius: 50%;
@@ -334,25 +335,24 @@ main{
   }
   table{
     width:100%;
-    padding:0 250px;
+    padding:0 200px 0 300px;
     .html{
-      // 11 - imgの個数
-      @include skills(1,$yellow);
+      @include skills($yellow);
     }
     .js{
-      @include skills(4,$green);
+      @include skills($green);
     }
     .jQuery{
-      @include skills(1,$purple);
+      @include skills($purple);
     }
     .java{
-      @include skills(7,$pink);
+      @include skills($pink);
     }
     .rails{
-      @include skills(8,$yellow);
+      @include skills($yellow);
     }
     .design{
-      @include skills(7,$blue);
+      @include skills($blue);
     }
   }
 }
@@ -381,24 +381,24 @@ main{
     }
     .contactJ{
       @include contact($fontJ,20px);
-      margin-top:4%;
+      margin-top:6%;
+      margin-bottom: 2%;
     }
     a{
       text-decoration: none;
       .contactE{
         @include contact($fontE,20px);
         letter-spacing: 2px;
-        margin-bottom:4%;
+        margin-bottom:6%;
         img{
           height:20px;
           margin:0 20px;
         }
         &:hover{
-          font-size: 21px;
+          color:transparentize( $gray, 0.5 );
           transition-duration: .5s;
         }
       }
-      
     }
   }
 }

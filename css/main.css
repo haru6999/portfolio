@@ -243,7 +243,8 @@ main {
     height: calc(94% - 30px);
     -webkit-transform: translateY(calc(-30px - 3%));
     -ms-transform: translateY(calc(-30px - 3%));
-    transform: translateY(calc(-30px - 3%)); }
+    transform: translateY(calc(-30px - 3%));
+    margin: 0 150px; }
     #profile .profileBox .proImgBox {
       display: -webkit-box;
       display: -ms-flexbox;
@@ -258,7 +259,7 @@ main {
       -webkit-box-align: center;
       -ms-flex-align: center;
       align-items: center;
-      width: 40%;
+      width: 50%;
       height: 100%; }
       #profile .profileBox .proImgBox img {
         width: 25vw;
@@ -280,7 +281,7 @@ main {
       -webkit-box-align: center;
       -ms-flex-align: center;
       align-items: center;
-      width: 60%;
+      width: 50%;
       height: 100%;
       text-align: center;
       vertical-align: middle; }
@@ -312,10 +313,10 @@ main {
     -ms-flex-pack: distribute;
     justify-content: space-around;
     padding: 0 30px; }
-    #work article div {
+    #work article a {
       width: 600px;
-      margin: 10px; }
-      #work article div img {
+      margin: 30px 10px; }
+      #work article a img {
         width: 100%; }
 
 #skill {
@@ -334,140 +335,146 @@ main {
     color: #313131; }
   #skill table {
     width: 100%;
-    padding: 0 250px; }
+    padding: 0 200px 0 300px; }
     #skill table .html {
-      padding: 100px 0;
       height: 8vw; }
-      #skill table .html .skillName span {
-        margin: 30px 0;
-        width: 10vw;
-        height: 10vw;
-        background-color: #fefd68;
-        display: table-cell;
-        border-radius: 50%;
-        text-align: center;
-        font-family: "Phenomena-Regular", sans-serif;
-        font-size: 20px;
-        letter-spacing: 4px;
-        font-weight: bold;
-        color: #313131;
-        vertical-align: middle;
-        padding-top: 20px auto; }
+      #skill table .html .skillName {
+        padding: 10px 0; }
+        #skill table .html .skillName span {
+          margin: 30px 0;
+          width: 8vw;
+          height: 8vw;
+          background-color: #fefd68;
+          display: table-cell;
+          border-radius: 50%;
+          text-align: center;
+          font-family: "Phenomena-Regular", sans-serif;
+          font-size: 20px;
+          letter-spacing: 4px;
+          font-weight: bold;
+          color: #313131;
+          vertical-align: middle;
+          padding-top: 20px auto; }
       #skill table .html .skillBox {
         padding: 30px 0 30px 30px;
         width: auto; }
         #skill table .html .skillBox img {
           width: 4vw; }
     #skill table .js {
-      padding: 100px 0;
       height: 8vw; }
-      #skill table .js .skillName span {
-        margin: 30px 0;
-        width: 10vw;
-        height: 10vw;
-        background-color: #a7f4d3;
-        display: table-cell;
-        border-radius: 50%;
-        text-align: center;
-        font-family: "Phenomena-Regular", sans-serif;
-        font-size: 20px;
-        letter-spacing: 4px;
-        font-weight: bold;
-        color: #313131;
-        vertical-align: middle;
-        padding-top: 20px auto; }
+      #skill table .js .skillName {
+        padding: 10px 0; }
+        #skill table .js .skillName span {
+          margin: 30px 0;
+          width: 8vw;
+          height: 8vw;
+          background-color: #a7f4d3;
+          display: table-cell;
+          border-radius: 50%;
+          text-align: center;
+          font-family: "Phenomena-Regular", sans-serif;
+          font-size: 20px;
+          letter-spacing: 4px;
+          font-weight: bold;
+          color: #313131;
+          vertical-align: middle;
+          padding-top: 20px auto; }
       #skill table .js .skillBox {
         padding: 30px 0 30px 30px;
         width: auto; }
         #skill table .js .skillBox img {
           width: 4vw; }
     #skill table .jQuery {
-      padding: 100px 0;
       height: 8vw; }
-      #skill table .jQuery .skillName span {
-        margin: 30px 0;
-        width: 10vw;
-        height: 10vw;
-        background-color: #e8dbf7;
-        display: table-cell;
-        border-radius: 50%;
-        text-align: center;
-        font-family: "Phenomena-Regular", sans-serif;
-        font-size: 20px;
-        letter-spacing: 4px;
-        font-weight: bold;
-        color: #313131;
-        vertical-align: middle;
-        padding-top: 20px auto; }
+      #skill table .jQuery .skillName {
+        padding: 10px 0; }
+        #skill table .jQuery .skillName span {
+          margin: 30px 0;
+          width: 8vw;
+          height: 8vw;
+          background-color: #e8dbf7;
+          display: table-cell;
+          border-radius: 50%;
+          text-align: center;
+          font-family: "Phenomena-Regular", sans-serif;
+          font-size: 20px;
+          letter-spacing: 4px;
+          font-weight: bold;
+          color: #313131;
+          vertical-align: middle;
+          padding-top: 20px auto; }
       #skill table .jQuery .skillBox {
         padding: 30px 0 30px 30px;
         width: auto; }
         #skill table .jQuery .skillBox img {
           width: 4vw; }
     #skill table .java {
-      padding: 100px 0;
       height: 8vw; }
-      #skill table .java .skillName span {
-        margin: 30px 0;
-        width: 10vw;
-        height: 10vw;
-        background-color: #fdddec;
-        display: table-cell;
-        border-radius: 50%;
-        text-align: center;
-        font-family: "Phenomena-Regular", sans-serif;
-        font-size: 20px;
-        letter-spacing: 4px;
-        font-weight: bold;
-        color: #313131;
-        vertical-align: middle;
-        padding-top: 20px auto; }
+      #skill table .java .skillName {
+        padding: 10px 0; }
+        #skill table .java .skillName span {
+          margin: 30px 0;
+          width: 8vw;
+          height: 8vw;
+          background-color: #fdddec;
+          display: table-cell;
+          border-radius: 50%;
+          text-align: center;
+          font-family: "Phenomena-Regular", sans-serif;
+          font-size: 20px;
+          letter-spacing: 4px;
+          font-weight: bold;
+          color: #313131;
+          vertical-align: middle;
+          padding-top: 20px auto; }
       #skill table .java .skillBox {
         padding: 30px 0 30px 30px;
         width: auto; }
         #skill table .java .skillBox img {
           width: 4vw; }
     #skill table .rails {
-      padding: 100px 0;
       height: 8vw; }
-      #skill table .rails .skillName span {
-        margin: 30px 0;
-        width: 10vw;
-        height: 10vw;
-        background-color: #fefd68;
-        display: table-cell;
-        border-radius: 50%;
-        text-align: center;
-        font-family: "Phenomena-Regular", sans-serif;
-        font-size: 20px;
-        letter-spacing: 4px;
-        font-weight: bold;
-        color: #313131;
-        vertical-align: middle;
-        padding-top: 20px auto; }
+      #skill table .rails .skillName {
+        padding: 10px 0; }
+        #skill table .rails .skillName span {
+          margin: 30px 0;
+          width: 8vw;
+          height: 8vw;
+          background-color: #fefd68;
+          display: table-cell;
+          border-radius: 50%;
+          text-align: center;
+          font-family: "Phenomena-Regular", sans-serif;
+          font-size: 20px;
+          letter-spacing: 4px;
+          font-weight: bold;
+          color: #313131;
+          vertical-align: middle;
+          padding-top: 20px auto; }
       #skill table .rails .skillBox {
         padding: 30px 0 30px 30px;
         width: auto; }
         #skill table .rails .skillBox img {
           width: 4vw; }
     #skill table .design {
-      padding: 100px 0;
       height: 8vw; }
-      #skill table .design .skillName span {
-        margin: 30px 0;
-        width: 10vw;
-        height: 10vw;
-        background-color: #b7e3fc;
-        display: table-cell;
-        border-radius: 50%;
-        text-align: center;
-        font-family: "Phenomena-Regular", sans-serif;
-        font-size: 20px;
-        letter-spacing: 4px;
-        font-weight: bold;
-        color: #313131;
-        vertical-align: middle;
-        padding-top: 20px auto; }
+      #skill table .design .skillName {
+        padding: 10px 0; }
+        #skill table .design .skillName span {
+          margin: 30px 0;
+          width: 8vw;
+          height: 8vw;
+          background-color: #b7e3fc;
+          display: table-cell;
+          border-radius: 50%;
+          text-align: center;
+          font-family: "Phenomena-Regular", sans-serif;
+          font-size: 20px;
+          letter-spacing: 4px;
+          font-weight: bold;
+          color: #313131;
+          vertical-align: middle;
+          padding-top: 20px auto; }
       #skill table .design .skillBox {
         padding: 30px 0 30px 30px;
         width: auto; }
@@ -508,7 +515,8 @@ main {
       transform: skewY(3deg);
       font-size: 20px;
       color: #313131;
-      margin-top: 4%; }
+      margin-top: 6%;
+      margin-bottom: 2%; }
     #contact div a {
       text-decoration: none; }
       #contact div a .contactE {
@@ -520,12 +528,12 @@ main {
         font-size: 20px;
         color: #313131;
         letter-spacing: 2px;
-        margin-bottom: 4%; }
+        margin-bottom: 6%; }
         #contact div a .contactE img {
           height: 20px;
           margin: 0 20px; }
         #contact div a .contactE:hover {
-          font-size: 21px;
+          color: rgba(49, 49, 49, 0.5);
           -webkit-transition-duration: .5s;
           -o-transition-duration: .5s;
           transition-duration: .5s; }
