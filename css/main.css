@@ -315,16 +315,16 @@ main {
     padding: 0 30px; }
     #work article a {
       width: 600px;
-      margin: 30px 10px; }
+      margin: 30px 10px;
+      -webkit-transition-duration: .5s;
+      -o-transition-duration: .5s;
+      transition-duration: .5s; }
       #work article a img {
         width: 100%; }
       #work article a:hover {
-        -webkit-transform: scale(1.05);
-        -ms-transform: scale(1.05);
-        transform: scale(1.05);
-        -webkit-transition-duration: .5s;
-        -o-transition-duration: .5s;
-        transition-duration: .5s; }
+        -webkit-transform: scale(1.05, 1.05);
+        -ms-transform: scale(1.05, 1.05);
+        transform: scale(1.05, 1.05); }
 
 #skill {
   height: auto;

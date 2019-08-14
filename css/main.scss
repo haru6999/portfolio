@@ -291,13 +291,12 @@ main{
     a{
       width:600px;
       margin:30px 10px;
-      
+      transition-duration: .5s;
       img{
         width:100%;
       }
       &:hover{
-        transform: scale(1.05);
-        transition-duration: .5s;
+        transform: scale(1.05,1.05);
       }
     }
   }
