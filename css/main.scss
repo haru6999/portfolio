@@ -295,6 +295,10 @@ main{
       img{
         width:100%;
       }
+      &:hover{
+        transform: scale(1.05);
+        transition-duration: .5s;
+      }
     }
   }
 }
